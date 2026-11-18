@@ -1,10 +1,10 @@
 {
-  "version": 2,
+  "version": 3,
   "workflows": [
     {
       "name": "АЛТЭК: новые файлы → MAX",
       "file": "workflows/01-notify-new-files.json",
-      "version": 2
+      "version": 3
     }
   ]
 }

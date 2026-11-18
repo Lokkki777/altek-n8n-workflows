@@ -16,7 +16,10 @@
       "name": "Каждые 5 минут",
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.2,
-      "position": [0, 300]
+      "position": [
+        0,
+        300
+      ]
     },
     {
       "parameters": {
@@ -26,7 +29,10 @@
       "name": "Найти новые файлы",
       "type": "n8n-nodes-base.executeCommand",
       "typeVersion": 1,
-      "position": [220, 300]
+      "position": [
+        220,
+        300
+      ]
     },
     {
       "parameters": {
@@ -36,7 +42,10 @@
       "name": "Собрать сообщения",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [440, 300]
+      "position": [
+        440,
+        300
+      ]
     },
     {
       "parameters": {
@@ -53,25 +62,53 @@
         },
         "sendBody": true,
         "contentType": "json",
+        "specifyBody": "json",
         "jsonBody": "={{ JSON.stringify({ text: $json.text }) }}"
       },
       "id": "08f209f2-f25b-452b-845a-5fd5f349d38e",
       "name": "Отправить в MAX",
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
-      "position": [660, 300],
+      "position": [
+        660,
+        300
+      ],
       "onError": "continueRegularOutput"
     }
   ],
   "connections": {
     "Каждые 5 минут": {
-      "main": [[{ "node": "Найти новые файлы", "type": "main", "index": 0 }]]
+      "main": [
+        [
+          {
+            "node": "Найти новые файлы",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     },
     "Найти новые файлы": {
-      "main": [[{ "node": "Собрать сообщения", "type": "main", "index": 0 }]]
+      "main": [
+        [
+          {
+            "node": "Собрать сообщения",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     },
     "Собрать сообщения": {
-      "main": [[{ "node": "Отправить в MAX", "type": "main", "index": 0 }]]
+      "main": [
+        [
+          {
+            "node": "Отправить в MAX",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "settings": {
