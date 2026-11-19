@@ -1,15 +1,15 @@
 {
-  "version": 4,
+  "version": 5,
   "workflows": [
     {
       "name": "АЛТЭК: новые файлы → MAX",
       "file": "workflows/01-notify-new-files.json",
-      "version": 3
+      "version": 4
     },
     {
       "name": "АЛТЭК: разбор документов → Kimi → MAX",
       "file": "workflows/02-analyze-docs.json",
-      "version": 1
+      "version": 2
     }
   ]
 }
