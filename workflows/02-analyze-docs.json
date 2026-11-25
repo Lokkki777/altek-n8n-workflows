@@ -167,7 +167,11 @@
         "specifyBody": "json",
         "jsonBody": "={{ JSON.stringify($json.body) }}",
         "options": {
-          "timeout": 240000
+          "timeout": 240000,
+          "batching": {
+            "batchSize": 1,
+            "waitBetweenBatches": 5000
+          }
         }
       },
       "id": "96bdb046-e4bf-4b31-8318-888fee897a34",
