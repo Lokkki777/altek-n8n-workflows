@@ -170,7 +170,7 @@
           "timeout": 240000,
           "batching": {
             "batchSize": 1,
-            "waitBetweenBatches": 5000
+            "batchInterval": 5000
           }
         }
       },
