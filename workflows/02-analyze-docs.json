@@ -171,7 +171,7 @@
           "batching": {
             "batch": {
               "batchSize": 1,
-              "batchInterval": 65000
+              "batchInterval": 120000
             }
           }
         }
