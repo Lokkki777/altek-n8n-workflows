@@ -169,8 +169,10 @@
         "options": {
           "timeout": 240000,
           "batching": {
-            "batchSize": 1,
-            "batchInterval": 5000
+            "batch": {
+              "batchSize": 1,
+              "batchInterval": 5000
+            }
           }
         }
       },
